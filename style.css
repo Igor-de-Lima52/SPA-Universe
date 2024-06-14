@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --color-white: #FFF;
+    --color-gray-300: #E1E1E6;
+    --color-gray-500: #C4C4CC;
+    --color-gray-700: #8D8D99;
+    --color-button-hover: #02799D;
+}
+html, body, button{
+    font-family: "Roboto", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+}
+body.image1{
+    background: url("./assets/mountains-universe-1.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+body.image2{
+    background: url("./assets/mountains-universe-2.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+body.image3{
+    background: url("./assets/mountains-universe-3.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem 7.2rem;
+    gap: 3.2rem;
+    font-size: 2rem;
+}
+nav a{
+    text-decoration: none;
+    color: var(--color-gray-500)
+}
+a.active{
+    font-weight: bold;
+    color: var(--color-white);
+    transition: color .5s;
+}
+nav a:hover{
+    color: var(--color-white);
+    transition: color .7s;
+}
+#app .home{
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    animation: screen1 1s;
+}
+#app .home h1{
+    font-size: 4.8rem;
+    color: var(--color-gray-300);
+    animation: screen1 1s;
+}
+#app .home button{
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    padding: 1.2rem 3.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: transparent;
+    animation: screen1 1s;
+}
+#app .home button:hover{
+    cursor: pointer;
+    background: var(--color-white);
+    color: var(--color-button-hover);
+    transition: background .5s, color .5s;
+}
+#app .universe, #app .exploration{
+    margin: 6.3rem 10.2rem 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    animation: screen2 1s;
+}
+#app .universe h2, #app .exploration h2{
+    font-size: 4.8rem;
+    line-height: 125%;
+    color: var(--color-gray-300);
+}
+#app .universe p, #app .exploration p{
+    font-size: 1.8rem;
+    color: var(--color-gray-300);
+    line-height: 160%;
+    max-width: 64.8rem;
+}
+@keyframes screen1 {
+    from{
+        opacity: 0%;
+        font-size: 1px;
+    }
+}
+@keyframes screen2{
+    from{
+        transform: translateY(90%);
+    }
+}
